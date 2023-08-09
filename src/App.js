@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Canvas } from "@react-three/fiber";
+import { Experience } from "./components/Experience";
+import { Experience1 } from "./components1/Experience1";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Main from "./Main"
+import Header from "./Header";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Main />}></Route>
+      <Route path="/header" element={<Header/>}></Route>
+    </Routes>
+    </BrowserRouter>
+    </>
   );
 }
 
